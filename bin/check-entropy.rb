@@ -23,9 +23,11 @@
 #   for details.
 #
 
-require 'rubygems' if RUBY_VERSION < '1.9.0'
 require 'sensu-plugin/check/cli'
 
+#
+# Check Entropy
+#
 class CheckEntropy < Sensu::Plugin::Check::CLI
   option :warn,
          short: '-w WARN',
@@ -37,7 +39,7 @@ class CheckEntropy < Sensu::Plugin::Check::CLI
          proc: proc(&:to_i),
          default: 30
 
-  def run
+  def run # rubocop:disable all
     unknown 'invalid entropy treshold' if config[:crit] < 0 || config[:warn] < 0
 
     entropy = 0
