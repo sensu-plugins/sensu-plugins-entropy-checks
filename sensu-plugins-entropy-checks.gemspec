@@ -23,7 +23,9 @@ Gem::Specification.new do |s|
   s.license                = 'MIT'
   s.metadata               = { 'maintainer'         => '',
                                'development_status' => 'unmaintained',
-                               'production_status'  => 'unstable - testing recommended'
+                               'production_status'  => 'unstable - testing recommended',
+                               'release_draft'      => 'false',
+                               'release_prerelease' => 'false'
   }
   s.name                   = 'sensu-plugins-entropy'
   s.platform               = Gem::Platform::RUBY
@@ -35,12 +37,10 @@ Gem::Specification.new do |s|
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsEntropy::VERSION
 
-  s.add_runtime_dependency 'rest-client',  '1.8.0'
-  s.add_runtime_dependency 'json',         '1.8.2'
   s.add_runtime_dependency 'sensu-plugin', '1.1.0'
 
   s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'
-s.add_development_dependency 'rubocop',                   '~> 0.30'
+  s.add_development_dependency 'rubocop',                   '~> 0.30'
   s.add_development_dependency 'rspec',                     '~> 3.1'
   s.add_development_dependency 'bundler',                   '~> 1.7'
   s.add_development_dependency 'rake',                      '~> 10.0'

@@ -1,7 +1,14 @@
+require 'sensu-plugins-entropy-checks/version'
+
+# Load the defaults
+
 #
-# Set gem version
+# Default class
 #
-module SensuPluginsEntropy
-  # Gem version
-  VERSION = '0.0.1.alpha.1'
+module SensuPluginsEntropyChecks
+  class << self
+  end
+
+  class << self
+  end
 end
