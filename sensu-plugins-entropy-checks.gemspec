@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.email                  = '<sensu-users@googlegroups.com>'
   s.executables            = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.files                  = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
-  s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-entropy'
+  s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-entropy-checks'
   s.license                = 'MIT'
   s.metadata               = { 'maintainer'         => '',
                                'development_status' => 'unmaintained',
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
                                'release_draft'      => 'false',
                                'release_prerelease' => 'false'
   }
-  s.name                   = 'sensu-plugins-entropy'
+  s.name                   = 'sensu-plugins-entropy-checks'
   s.platform               = Gem::Platform::RUBY
   s.post_install_message   = 'You can use the embedded Ruby by setting EMBEDDED_RUBY=true in /etc/default/sensu'
   s.require_paths          = ['lib']
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   s.signing_key            = File.expand_path(pvt_key) if $PROGRAM_NAME =~ /gem\z/
   s.summary                = 'Sensu plugins for entropy'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
-  s.version                = SensuPluginsEntropy::Version::VER_STRING
+  s.version                = SensuPluginsEntropyChecks::Version::VER_STRING
 
   s.add_runtime_dependency 'sensu-plugin', '1.1.0'
 
