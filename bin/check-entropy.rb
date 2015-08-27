@@ -39,7 +39,7 @@ class CheckEntropy < Sensu::Plugin::Check::CLI
          proc: proc(&:to_i),
          default: 30
 
-  def run # rubocop:disable all
+  def run
     unknown 'invalid entropy treshold' if config[:crit] < 0 || config[:warn] < 0
 
     entropy = 0
