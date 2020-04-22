@@ -1,5 +1,6 @@
 #! /usr/bin/env ruby
-#
+# frozen_string_literal: true
+
 #   check-entrophy
 #
 # DESCRIPTION:
@@ -40,7 +41,7 @@ class CheckEntropy < Sensu::Plugin::Check::CLI
          default: 30
 
   def run
-    unknown 'invalid entropy treshold' if config[:crit] < 0 || config[:warn] < 0
+    unknown 'invalid entropy treshold' if config[:crit] < 0 || config[:warn] < 0 # rubocop: disable Style/NumericPredicate
 
     entropy = 0
 

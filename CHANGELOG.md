@@ -5,6 +5,18 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+### Breaking Changes
+- Update minimum required ruby version to 2.3. Drop unsupported ruby versions.
+- Bump `sensu-plugin` dependency from `~> 1.2` to `~> 4.0`
+
+### Added
+- Bonsai asset support
+### Changed
+- Updated bundler dependancy to '~> 2.1'
+- Updated rubocop dependency to '~> 0.81.0'
+- Remediated rubocop issues
+- Updated rake dependency to '~> 13.0'
+
 ## [1.0.0] - 2017-05-15
 ### Added
 - Support for Ruby 2.3 and 2.4 (@eheydrick)
@@ -34,3 +46,4 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/0.0.3...1.0.0
 [0.0.3]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/0.0.1...0.0.2
+
