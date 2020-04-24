@@ -1,12 +1,11 @@
 language: ruby
+services:
+- docker
 cache:
 - bundler
 install:
 - bundle install
 rvm:
-- 2.0
-- 2.1
-- 2.2
 - 2.3.0
 - 2.4.1
 notifications:
@@ -20,16 +19,20 @@ script:
 - gem build sensu-plugins-entropy-checks.gemspec
 - gem install sensu-plugins-entropy-checks-*.gem
 deploy:
-  provider: rubygems
+- provider: rubygems
   api_key:
     secure: JfJo85if4fEYtM51AkKeE7D7gK62CBVXGl+nmkTUb7uCN5+YQqtsGx59zYHR4OOTlfGOMYZr03ygloz/F9yC2+dlKFwrTk4a1+q9MDNl8z4iBT3ROv+Ek2rGsWqe8kI30/mLEZv2wWEiGwlEvwcWcoEJD82spcyLYZ+6Ui2bvS8=
   gem: sensu-plugins-entropy-checks
   on:
     tags: true
     all_branches: true
-    rvm: 2.0
-    rvm: 2.1
-    rvm: 2.2
     rvm: 2.3.0
     rvm: 2.4.1
     repo: sensu-plugins/sensu-plugins-entropy-checks
+- provider: script
+  script: bonsai/ruby-runtime/travis-build-ruby-plugin-assets.sh sensu-plugins-entropy-checks
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+    rvm: 2.4.1
