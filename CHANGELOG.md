@@ -5,6 +5,10 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [2.0.2] - 2020-05-05
+### Changed
+- Fixed travis for bonsai clone
+
 ## [2.0.1] - 2020-05-05
 ### Changed
 - Fixed travis for ruby gem
@@ -47,7 +51,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/2.0.1...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/2.0.2...HEAD
+[2.0.2]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/1.0.0...2.0.0
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-entropy-checks/compare/0.0.3...1.0.0
